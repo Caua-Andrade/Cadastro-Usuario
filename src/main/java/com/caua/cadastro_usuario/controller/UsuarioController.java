@@ -4,10 +4,7 @@ import com.caua.cadastro_usuario.business.UsuarioService;
 import com.caua.cadastro_usuario.infrastructure.entities.Usuario;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/usuario")
@@ -21,4 +18,11 @@ public class UsuarioController {
         usuarioService.salvarUsuario(usuario);
         return ResponseEntity.ok().build();
     }
+
+    @GetMapping
+    public ResponseEntity<Usuario> buscarUsuarioPorEmail(@RequestParam String email) {
+        return ResponseEntity.ok(usuarioService.buscarUsuarioPorEmail(email));
+    }
+
+
 }
