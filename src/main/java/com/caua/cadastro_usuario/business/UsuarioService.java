@@ -17,4 +17,10 @@ public class UsuarioService {
         repository.saveAndFlush(usuario);
         // Ele salva e fecha o banco
     }
+
+    public Usuario buscarUsuarioPorEmail(String email) {
+        return repository.findByEmail(email).orElseThrow(
+                () -> new RuntimeException("Email não encontrado")
+        );
+    }
 }
