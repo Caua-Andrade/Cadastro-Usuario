@@ -1,4 +1,4 @@
-# 🚀 Cadastro de Usuários — Spring Boot API
+# 🚀 Cadastro de Usuários - Spring Boot API
 
 API REST simples e objetiva para **cadastro, consulta, atualização e remoção de usuários**, desenvolvida com **Spring Boot**, **Spring Data JPA**, **H2 Database** e **Lombok**.
 Projeto com foco didático e organização em camadas 🧱.
